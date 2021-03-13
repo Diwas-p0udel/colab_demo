@@ -1,39 +1,7 @@
-<?php
-function sanatizeFromPassword($inputText){
-    $inputText=strip_tags($inputText);
-    return $inputText;
-}
-function sanatizeFromUsername($inputText){
-    $inputText=strip_tags($inputText);
-    $inputText=str_replace(" ","",$inputText);
-    return $inputText;
-}
-function sanatizeFromString($inputText){
-    $inpuText=strip_tags($inputText);
-    $inputText=str_replace(" ","",$inputText);
-    $inpuText=ucfirst(strtolower($inpuText));
-    return $inputText;
-}
-
-
-if(isset($_POST['loginButton']))
-{
-    echo "sign in is presed";
-}
-if(isset($_POST['registerButton'])){
-   // echo "sign up is presed";
-   $username=sanatizeFromString($_POST['Username']);
-   $firstName=sanatizeFromString($_POST['firstName']);
-   $Lastname=sanatizeFromString($_POST['lastName']);
-   $Email=sanatizeFromString($_POST['Email']);
-   $Address=sanatizeFromString($_POST['UserAddress']);
-   $regPassword=sanatizeFromPassword($_POST['registerPassword']);
-   $regPassword2=sanatizeFromPassword($_POST['regPassword2']);
-}
-?>
 <html>
 <head>
     <title>Slotify</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div id="inputContainer">
